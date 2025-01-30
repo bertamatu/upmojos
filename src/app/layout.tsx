@@ -17,11 +17,11 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "UPMOJOS | Web Development & Digital Solutions",
+    default: "UPMOJOS | Digital Presence",
     template: "%s | UPMOJOS"
   },
   description: "UPMOJOS - Professional web development, mobile applications, and digital solutions. Building innovative tech solutions with purpose.",
-  keywords: ["web development", "mobile apps", "digital solutions", "tech partner", "full-stack development"],
+  keywords: ["web development", "mobile apps", "digital solutions", "tech partner", "full-stack development", "social media", 'personal brand'],
   authors: [{ name: "Berta Matuliauskiene" }],
   creator: "Berta Matuliauskiene",
   openGraph: {
