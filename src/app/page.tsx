@@ -60,12 +60,12 @@ export default function Home() {
                 <span className={styles.timelineNumber}>01</span>
                 <div className={styles.timelineLine} />
                 <div className={styles.timelineContent}>
-                  <div className={styles.timelineDot} style={{ backgroundColor: '#FF6B6B' }} />
+                  <div className={styles.timelineDot} style={{ backgroundColor: '#ff0044' }} />
                   <div className={styles.timelineTextBlock}>
                     <p className={styles.timelineTextPrimary}>Personal Brand</p>
                     <p className={styles.timelineTextSecondary}>Social Media Growth</p>
                   </div>
-                  <span className={styles.timelineYear}>/2020</span>
+                  <span className={styles.timelineYear}>/ 2019</span>
                 </div>
               </div>
 
@@ -73,12 +73,12 @@ export default function Home() {
                 <span className={styles.timelineNumber}>02</span>
                 <div className={styles.timelineLine} />
                 <div className={styles.timelineContent}>
-                  <div className={styles.timelineDot} style={{ backgroundColor: '#4FB8E7' }} />
+                  <div className={styles.timelineDot} style={{ backgroundColor: '#ff0044' }} />
                   <div className={styles.timelineTextBlock}>
                     <p className={styles.timelineTextPrimary}>Web Development</p>
                     <p className={styles.timelineTextSecondary}>Full-stack Solutions</p>
                   </div>
-                  <span className={styles.timelineYear}>/2021</span>
+                  <span className={styles.timelineYear}>/ 2021</span>
                 </div>
               </div>
 
@@ -86,12 +86,12 @@ export default function Home() {
                 <span className={styles.timelineNumber}>03</span>
                 <div className={styles.timelineLine} />
                 <div className={styles.timelineContent}>
-                  <div className={styles.timelineDot} style={{ backgroundColor: '#9FE65C' }} />
+                  <div className={styles.timelineDot} style={{ backgroundColor: '#ff0044' }} />
                   <div className={styles.timelineTextBlock}>
                     <p className={styles.timelineTextPrimary}>Mobile Apps</p>
                     <p className={styles.timelineTextSecondary}>Cross-platform Development</p>
                   </div>
-                  <span className={styles.timelineYear}>/2025</span>
+                  <span className={styles.timelineYear}>/ 2025</span>
                 </div>
               </div>
             </div>
