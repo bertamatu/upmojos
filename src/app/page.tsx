@@ -78,7 +78,7 @@ export default function Home() {
                     <p className={styles.timelineTextPrimary}>Web Development</p>
                     <p className={styles.timelineTextSecondary}>Full-stack Solutions</p>
                   </div>
-                  <span className={styles.timelineYear}>/ 2021</span>
+                  <span className={styles.timelineYear}>/ 2020</span>
                 </div>
               </div>
 
