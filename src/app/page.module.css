@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
+  padding-top: 80px; /* Space for fixed header */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +26,9 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main ol {
@@ -87,11 +90,9 @@ a.secondary {
 }
 
 .footer {
-  width: 100%;
   padding: 1.5rem;
   text-align: center;
-  border-top: 1px solid var(--gray-alpha-200);
-  background-color: #f5f5f5;
+  margin-top: auto;
 }
 
 .footerContent {
@@ -103,10 +104,6 @@ a.secondary {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
 }
 
 /* Enable hover only on non-touch devices */
@@ -173,7 +170,7 @@ a.secondary {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background: transparent;
+  background-color: var(--gray-alpha-200);
 }
 
 .logo {
@@ -249,17 +246,24 @@ a.secondary {
 }
 
 .heroSection {
+  flex: 1;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 4rem;
-  padding: 2rem 0;
+  align-items: center; /* Center grid items vertically */
+  min-height: calc(100vh - 220px); /* Account for header, footer, and padding */
 }
 
 .leftContent {
-  position: sticky;
-  top: 100px;
   height: fit-content;
   display: none;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -278,7 +282,7 @@ a.secondary {
 }
 
 .circle {
-  background-color: var(--primary-green);
+  background-color: #0ebdb4;
   border-radius: 9999px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -290,20 +294,14 @@ a.secondary {
 }
 
 .chevronIcon {
-  width: 2rem;
-  height: 2rem;
-  color: var(--gray-900);
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
 }
 
 .textBlock {
   text-align: center;
   font-family: var(--font-mono);
-}
-
-.textBlock p {
-  margin: 0;
-  line-height: 1.5;
-  color: var(--gray-900);
 }
 
 .smallText {
@@ -318,7 +316,8 @@ a.secondary {
 .divider {
   width: 1px;
   height: 8rem;
-  background-color: var(--gray-alpha-200);
+  /* background-color: var(--gray-alpha-200); */
+  background-color: rgb(193, 193, 193);
   margin: 2rem 0;
 }
 
@@ -345,21 +344,21 @@ a.secondary {
 
 .aboutButton {
   padding: 0.75rem 2rem;
-  background: var(--gray-900);
-  color: white;
+  background: white;
+  color: var(--gray-900);
   border: none;
   border-radius: 2rem;
-  font-weight: 600;
+  border: 1px solid var(--gray-900);
+  font-weight: 400;
   text-decoration: none;
 }
 
 .talkButton {
   padding: 0.75rem 2rem;
-  background: white;
-  color: var(--gray-900);
-  border: 1px solid var(--gray-900);
+  background: var(--gray-900);
+  color: white;
   border-radius: 2rem;
-  font-weight: 600;
+  font-weight: 800;
   text-decoration: none;
 }
 
@@ -392,7 +391,8 @@ a.secondary {
 .timelineLine {
   flex: 1;
   height: 1px;
-  background-color: var(--gray-alpha-200);
+  background-color: rgb(193, 193, 193);
+
 }
 
 .timelineContent {
@@ -473,10 +473,32 @@ a.secondary {
   .timelineYear {
     margin-left: auto;
   }
+
+  .heroSection {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .leftContent {
+    position: static;
+    transform: none;
+  }
+
+  .circleContainer {
+    gap: 1.5rem;
+  }
+
+  .rightContent {
+    justify-content: flex-start;
+  }
 }
 
 .aboutContent {
   max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 200px); /* Account for header, footer, and padding */
 }
 
 .aboutText {
@@ -516,6 +538,11 @@ a.secondary {
   .sectionText {
     font-size: 1rem;
   }
+
+  .aboutContent {
+    min-height: auto;
+    padding: 2rem 0;
+  }
 }
 
 .introSection {
@@ -524,7 +551,7 @@ a.secondary {
 
 .dividerLine {
   border: none;
-  border-top: 1px solid var(--gray-alpha-200);
+  border-top: 1.4px solid rgb(193, 193, 193);
   margin: 1.5rem 0;
 }
 
@@ -586,7 +613,7 @@ a.secondary {
 }
 
 .socialLink:hover {
-  color: var(--primary-green);
+  color: #0ebdb4;
 }
 
 .socialIcon {
