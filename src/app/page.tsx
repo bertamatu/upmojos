@@ -1,94 +1,108 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Navigation from './components/Navigation/Navigation';
+import Link from 'next/link';
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <Navigation />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <main className={styles.main}>
+        <div className={styles.heroSection}>
+          <div className={styles.leftContent}>
+            <div className={styles.circleContainer}>
+              <div className={styles.circle}>
+                <svg className={styles.chevronIcon} viewBox="0 0 24 24" fill="none">
+                  <path d="M12 15.2L7.4 10.6L8.8 9.2L12 12.4L15.2 9.2L16.6 10.6L12 15.2Z" fill="currentColor" />
+                </svg>
+              </div>
+
+              <div className={styles.textBlock}>
+                <p className={styles.smallText}>INNOVATIVE</p>
+                <p className={styles.boldText}>SOLUTIONS</p>
+              </div>
+
+              <div className={styles.divider} />
+
+              <div className={styles.textBlock}>
+                <p>TRANSFORM</p>
+                <p>YOUR</p>
+                <p className={styles.boldText}>VISION</p>
+              </div>
+              <div className={styles.textBlock}>
+                <hr className={styles.dividerLine} />
+                <p className={styles.smallText}>COLLABORATE AS</p>
+                <p className={styles.boldText}>TECH PARTNER</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.rightContent}>
+            <h1 className={styles.mainTitle}>
+              ELEVATE<br />
+              YOUR DIGITAL<br />
+              PRESENCE
+            </h1>
+
+            <div className={styles.ctaButtons}>
+              <Link href="/about" className={styles.aboutButton}>
+                ABOUT
+              </Link>
+              <a href="mailto:hello@upmojos.com" className={styles.talkButton}>
+                Let&apos;s talk →
+              </a>
+            </div>
+
+            <div className={styles.timelineSection}>
+              <div className={styles.timelineItem}>
+                <span className={styles.timelineNumber}>01</span>
+                <div className={styles.timelineLine} />
+                <div className={styles.timelineContent}>
+                  <div className={styles.timelineDot} style={{ backgroundColor: '#FF6B6B' }} />
+                  <div className={styles.timelineTextBlock}>
+                    <p className={styles.timelineTextPrimary}>Personal Brand</p>
+                    <p className={styles.timelineTextSecondary}>Social Media Growth</p>
+                  </div>
+                  <span className={styles.timelineYear}>/2020</span>
+                </div>
+              </div>
+
+              <div className={styles.timelineItem}>
+                <span className={styles.timelineNumber}>02</span>
+                <div className={styles.timelineLine} />
+                <div className={styles.timelineContent}>
+                  <div className={styles.timelineDot} style={{ backgroundColor: '#4FB8E7' }} />
+                  <div className={styles.timelineTextBlock}>
+                    <p className={styles.timelineTextPrimary}>Web Development</p>
+                    <p className={styles.timelineTextSecondary}>Full-stack Solutions</p>
+                  </div>
+                  <span className={styles.timelineYear}>/2021</span>
+                </div>
+              </div>
+
+              <div className={styles.timelineItem}>
+                <span className={styles.timelineNumber}>03</span>
+                <div className={styles.timelineLine} />
+                <div className={styles.timelineContent}>
+                  <div className={styles.timelineDot} style={{ backgroundColor: '#9FE65C' }} />
+                  <div className={styles.timelineTextBlock}>
+                    <p className={styles.timelineTextPrimary}>Mobile Apps</p>
+                    <p className={styles.timelineTextSecondary}>Cross-platform Development</p>
+                  </div>
+                  <span className={styles.timelineYear}>/2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
+
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className={styles.footerContent}>
+          © {currentYear} UPMOJOS. All rights reserved.
+        </div>
       </footer>
     </div>
   );
